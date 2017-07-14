@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "UToledo Engineering Career Fair Filter",
+  "description": "This extension filters the companies of the University of Toledo Engineering Career Fair",
+  "version": "1.0",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "UToledo Engineering Career Fair Filter"
+  },
+  "permissions": [
+    "declarativeContent",
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}
