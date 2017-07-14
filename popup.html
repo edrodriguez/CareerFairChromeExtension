@@ -8,60 +8,56 @@
             font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
             font-size: 100%;
         }
-        #status {
-            /* avoid an excessively wide status text */
-            white-space: pre;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            max-width: 400px;
-        }
     </style>
 </head>
 <body>
 <div>
     Select filters for the page
 </div>
-<table>
-    <tr>
-        <td>Major</td>
-        <td><select>
-            <option value="ME">Mechanical Engineering</option>
-            <option value="CHEM">Chemical Engineering</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
-        </select></td>
-    </tr>
-    <tr>
-        <td>Hiring</td>
-        <td><select>
-            <option value="COOP">Co-op</option>
-            <option value="FULL">Full-Time</option>
-        </select></td>
-    </tr>
-    <tr>
-        <td>Master Students</td>
-        <td><select>
-            <option value="YES">Yes</option>
-            <option value="CHEM">No</option>
-            <option value="NA">Not Applicable</option>
-        </select></td>
-    </tr>
-    <tr>
-        <td>PhD Students</td>
-        <td><select>
-            <option value="YES">Yes</option>
-            <option value="CHEM">No</option>
-            <option value="NA">Not Applicable</option>
-        </select></td>
-    </tr>
-    <tr>
-        <td>US Citizenship Required</td>
-        <td><select>
-            <option value="YES">Yes</option>
-            <option value="CHEM">No</option>
-            <option value="NA">Not Applicable</option>
-        </select></td>
-    </tr>
-</table>
+<form action="/action_page.php">
+    <table>
+        <tr>
+            <td>Major</td>
+            <td><select id="major">
+                <option value="ME">Mechanical Engineering</option>
+                <option value="CHEM">Chemical Engineering</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>Hiring</td>
+            <td><select id="hiring">
+                <option value="COOP">Co-op</option>
+                <option value="FULL">Full-Time</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>Master Students</td>
+            <td><select id="master">
+                <option value="YES">Yes</option>
+                <option value="NO">No</option>
+                <option value="NA">Not Applicable</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>PhD Students</td>
+            <td><select id="phd">
+                <option value="YES">Yes</option>
+                <option value="NO">No</option>
+                <option value="NA">Not Applicable</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>US Citizenship Required</td>
+            <td><select id="us">
+                <option value="YES">Yes</option>
+                <option value="NO">No</option>
+                <option value="NA">Not Applicable</option>
+            </select></td>
+        </tr>
+    </table>
+    <input type="submit" value="Submit">
+</form>
 </body>
 </html>
