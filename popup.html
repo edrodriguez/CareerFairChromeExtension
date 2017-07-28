@@ -8,56 +8,136 @@
             font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
             font-size: 100%;
         }
+
+        .majorTable {
+            text-align: center;
+        }
     </style>
+    <script src="popup.js"></script>
+    <script src="content.js"></script>
 </head>
 <body>
 <div>
     Select filters for the page
 </div>
-<form action="/action_page.php">
-    <table>
-        <tr>
-            <td>Major</td>
-            <td><select id="major">
-                <option value="ME">Mechanical Engineering</option>
-                <option value="CHEM">Chemical Engineering</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
-            </select></td>
-        </tr>
-        <tr>
-            <td>Hiring</td>
-            <td><select id="hiring">
-                <option value="COOP">Co-op</option>
-                <option value="FULL">Full-Time</option>
-            </select></td>
-        </tr>
-        <tr>
-            <td>Master Students</td>
-            <td><select id="master">
-                <option value="YES">Yes</option>
-                <option value="NO">No</option>
-                <option value="NA">Not Applicable</option>
-            </select></td>
-        </tr>
-        <tr>
-            <td>PhD Students</td>
-            <td><select id="phd">
-                <option value="YES">Yes</option>
-                <option value="NO">No</option>
-                <option value="NA">Not Applicable</option>
-            </select></td>
-        </tr>
-        <tr>
-            <td>US Citizenship Required</td>
-            <td><select id="us">
-                <option value="YES">Yes</option>
-                <option value="NO">No</option>
-                <option value="NA">Not Applicable</option>
-            </select></td>
-        </tr>
-    </table>
-    <input type="submit" value="Submit">
-</form>
+<table>
+    <tr>
+        <td>
+        <table>
+            <tr>
+                <td>Major</td>
+            </tr>
+            <tr>
+                <td><input id = "major" type="checkbox"/></td>
+            </tr>
+        </table>
+        </td>
+        <td>
+            <table class="majorTable">
+                <tr>
+                    <td>BIOE</td>
+                    <td>CET</td>
+                    <td>CHEM</td>
+                    <td>CLVE</td>
+                </tr>
+                <tr>
+                    <td><input id = "BIOE" type="checkbox"/></td>
+                    <td><input id = "CET" type="checkbox"/></td>
+                    <td><input id = "CHEM" type="checkbox"/></td>
+                    <td><input id = "CLVE" type="checkbox"/></td>
+                </tr>
+                <tr>
+                    <td>CSE</td>
+                    <td>CSET</td>
+                    <td>EE</td>
+                    <td>EET</td>
+                </tr>
+                <tr>
+                    <td><input id = "CSE" type="checkbox"/></td>
+                    <td><input id = "CSET" type="checkbox"/></td>
+                    <td><input id = "EE" type="checkbox"/></td>
+                    <td><input id = "EET" type="checkbox"/></td>
+                </tr>
+                <tr>
+                    <td>ENVE</td>
+                    <td>IT</td>
+                    <td>ME</td>
+                    <td>MET</td>
+                </tr>
+                <tr>
+                    <td><input id = "ENVE" type="checkbox"/></td>
+                    <td><input id = "IT" type="checkbox"/></td>
+                    <td><input id = "ME" type="checkbox"/></td>
+                    <td><input id = "MET" type="checkbox"/></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <td>Hiring</td>
+                </tr>
+                <tr>
+                    <td><input id = "hiring" type="checkbox"/></td>
+                </tr>
+            </table>
+        </td>
+        <td><select id="hireSelect">
+            <option value="COOP">Co-op</option>
+            <option value="FULL">Full-Time</option>
+        </select></td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <td>Master Students</td>
+                </tr>
+                <tr>
+                    <td><input id = "master" type="checkbox"/></td>
+                </tr>
+            </table>
+        </td>
+        <td><select id="masterSelect">
+            <option value="YES">Yes</option>
+            <option value="NO">No</option>
+        </select></td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <td>PhD Students</td>
+                </tr>
+                <tr>
+                    <td><input id = "phd" type="checkbox"/></td>
+                </tr>
+            </table>
+        </td>
+        <td><select id="phdSelect">
+            <option value="YES">Yes</option>
+            <option value="NO">No</option>
+        </select></td>
+    </tr>
+    <tr>
+        <td>
+        <table>
+            <tr>
+                <td>US Citizenship Required</td>
+            </tr>
+            <tr>
+                <td><input id = "us" type="checkbox"/></td>
+            </tr>
+        </table>
+        </td>
+        <td><select id="usSelect">
+            <option value="YES">Yes</option>
+            <option value="NO">No</option>
+        </select></td>
+    </tr>
+</table>
+<button id="filter" type="button">Filter</button>
 </body>
 </html>

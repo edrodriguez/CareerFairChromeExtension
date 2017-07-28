@@ -13,8 +13,6 @@
     "default_title": "UToledo Engineering Career Fair Filter"
   },
   "permissions": [
-    "declarativeContent",
-    "activeTab",
-    "https://ajax.googleapis.com/"
+    "tabs", "http://www.eng.utoledo.edu/coop/career_expo/companies.html"
   ]
 }
