@@ -1,11 +1,6 @@
 /**
  * Created by edrom on 7/21/2017.
  */
-
-//Something like this in this place without any function or anything works for changing the contents of the page
-/*
-document.body.style.background = 'yellow';
-*/
 function generateMajorRegex(majorStates){
     var regexes = new Array;
 
@@ -43,12 +38,10 @@ function generateMajorRegex(majorStates){
 
 document.addEventListener('csEvent', function (event) {
     var data = event.detail;
-
     var tableClass = 'fill border company_listing';
     var companies = document.getElementsByClassName(tableClass);
     var companiesBody = document.getElementsByClassName('fill company_listing_body');
-
-    var majorRegexes = generateMajorRegex(data.majorStates);
+    var majorRegexes =  generateMajorRegex(data.majorStates);
 
     for (var i = 0; i < companies.length; i++){
         var majorFound = false;
@@ -70,8 +63,69 @@ document.addEventListener('csEvent', function (event) {
     }
 });
 
-function filterMajor(table) {
-    alert("majorcalled");
-    var contentRow = table.rows.length[1].innerHTML;
-    alert(contentRow);
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+
+
+//Something like this in this place without any function or anything works for changing the contents of the page
+function al() {
+    document.body.style.background = 'yellow';
 }
+
+var companies = document.getElementsByClassName('fill border company_listing');
+////
+for (var i = 0; i < companies.length; i++){
+    companies[i].style.display = 'none';
+}
+
+//al();
+*/
+
+/*
+document.addEventListener('csEvent', function (event) {
+    var data = event.detail;
+
+    var tableClass = 'fill border company_listing';
+    var companies = document.getElementsByClassName(tableClass);
+    ////
+    document.body.style.background = 'yellow';
+    al();
+    */
+    ////
+    /*var companiesBody = document.getElementsByClassName('fill company_listing_body');
+
+    var majorRegexes = generateMajorRegex(data.majorStates);
+
+    for (var i = 0; i < companies.length; i++){
+        var majorFound = false;
+        //check for major
+        var majorField = companiesBody[i].rows[1].cells[2].innerHTML;
+
+        for (var i = 0; i < majorRegexes.length; i++){
+            var s = majorRegexes[i];
+            if (majorField.search(s)){
+                majorFound = true;
+                break;
+            }
+
+        }
+        if (majorFound)//contains major
+            continue;
+        else
+            companies[i].style.display = 'none'; //temporary, need to change to account for multiple majors
+    }
+    */
+//});
+
+

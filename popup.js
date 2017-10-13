@@ -154,16 +154,16 @@ function getFiltersStates() {
 function filterClick() {
     chrome.tabs.executeScript(null,
         {file: "content.js"});
+
     //window.close();
 }
 
 document.addEventListener('DOMContentLoaded', function() {
     var link = document.getElementById('filter');
     link.addEventListener("click", function() {
-        filterClick();
         var dataForFilter = getFiltersStates();
-        document.dispatchEvent(new CustomEvent('csEvent', {detail: dataForFilter}));
         filterClick();
+        document.dispatchEvent(new CustomEvent('csEvent', {detail: dataForFilter}));
     });
 });
 
